@@ -66,7 +66,8 @@ void loop()
     strip.setPixelColor(i, strip.Color(red, green, blue));
   }
 
-  Serial.print("Temp: "); Serial.println(temp);
+  Serial.print("Temp: ");
+  Serial.println(temp);
 
   strip.show();
 }
