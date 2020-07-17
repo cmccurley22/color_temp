@@ -37,7 +37,8 @@ void loop()
     Serial.println(F("Failed to read from DHT sensor!"));
     return;
   }
-  
+
+  //DEFAULT - COLD
   red = 0;
   green = 0;
   blue = 255;
@@ -48,14 +49,14 @@ void loop()
     blue = 0;
   }
 
-  else if (temp > 65) //COMFY
+  else if (temp > 65) //COMFY HOT
   {
     red = map(temp, 45, 85, 0, 255);
     green = map(temp, 45, 85, 255, 0);
     blue = 0;
   }
   
-  else if (temp > 45) //COLD
+  else if (temp > 45) //COMFY COLD
   {
     blue = map(temp, 45, 65, 255, 0);
     green = map(temp, 45, 65, 0, 255);
