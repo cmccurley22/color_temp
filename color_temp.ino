@@ -50,7 +50,7 @@ void loop()
 
   else if (temp > 65) //COMFY
   {
-    red = map(temp, 50, 85, 0, 255);
+    red = map(temp, 45, 85, 0, 255);
     green = map(temp, 45, 85, 255, 0);
     blue = 0;
   }
